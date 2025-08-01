@@ -1,0 +1,16 @@
+package com.raviraj.app;
+
+public class Laptop implements Computer {
+	
+	Computer.compiler();
+	
+	public Laptop() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void Compile() {
+		System.out.println("File compiled by Laptop");
+	}
+
+}

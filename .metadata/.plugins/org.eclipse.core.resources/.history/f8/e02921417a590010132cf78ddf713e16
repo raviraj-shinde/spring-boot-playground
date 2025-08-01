@@ -1,0 +1,26 @@
+package com.raviraj.app;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+@SpringBootApplication
+public class SpringBootDiApplication {
+
+	public static void main(String[] args) {
+		ApplicationContext context = SpringApplication.run(SpringBootDiApplication.class, args);
+
+		Alien a = context.getBean("alien", Alien.class);
+		a.print();
+
+//		Desktop dk = context.getBean("desktop", Desktop.class);
+//		a.setCom(dk);
+
+		Computer dk = a.getCom1();
+		Computer lp = a.getCom1();
+		dk.compile();
+		lp.compile();
+
+	}
+
+}

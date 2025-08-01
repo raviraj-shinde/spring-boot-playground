@@ -1,0 +1,32 @@
+package com.raviraj.app;
+
+public class Seller {
+	Desktop hp;
+	private int price;
+	int count;
+
+	public Seller(int count) {
+		this.count = count;
+	}
+
+	public Desktop getHp() {
+		System.out.println("Seller: HP Desktop Given to Alien");
+		return hp;
+	}
+
+	public void setHp(Desktop hp) {
+		this.hp = hp;
+	}
+
+	public int getPrice() {
+		return price * count;
+	}
+
+	public void setPrice(int price) {  //setters are called at the Spring Bean Creation
+		this.price = price;
+	}
+	
+	
+	
+	
+}

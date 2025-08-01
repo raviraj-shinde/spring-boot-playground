@@ -1,0 +1,8 @@
+package com.raviraj.app;
+
+public class Student {
+	private int roll_no;
+	private String name;
+	
+	
+}

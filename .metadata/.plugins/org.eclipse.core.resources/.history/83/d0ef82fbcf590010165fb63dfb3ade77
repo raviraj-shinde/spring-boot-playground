@@ -1,0 +1,57 @@
+package com.raviraj.app.model;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope("prototype")
+public class Student {
+//Properties
+	private int rollno;
+	private String name;
+	private int marks;
+/*
+//Constructor - We have to inject values here otherwise bean requires non-parameterized constructor
+	public Student(int rollno, String name, int marks) {
+		this.rollno = rollno;
+		this.name = name;
+		this.marks = marks;
+	}
+	
+	// no arg - constructor VERY IMP - otherwise ERROR
+	public Student() {
+	}
+*/
+
+//Getters and Setters	
+	public int getRollno() {
+		return rollno;
+	}
+
+	public void setRollno(int roll_no) {
+		this.rollno = roll_no;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getMarks() {
+		return marks;
+	}
+
+	public void setMarks(int marks) {
+		this.marks = marks;
+	}
+
+//Default override methods
+	@Override
+	public String toString() {
+		return "Student [roll_no=" + rollno + ", name=" + name + ", marks=" + marks + "]";
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.raviraj.app.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.raviraj.app.dao.StudentDao;
+
+@Service
+public class StudentService {
+	
+	private StudentDao dao;
+	
+	@Autowired
+	public void setDao(StudentDao dao) {
+		this.dao = dao;
+	}
+}

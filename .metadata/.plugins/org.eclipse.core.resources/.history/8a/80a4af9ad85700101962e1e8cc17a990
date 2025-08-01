@@ -1,0 +1,9 @@
+package com.raviraj.SpringFirst;
+
+public class Student {
+
+	public void call() {
+		System.out.println("Hey What... ?s");
+	}
+
+}

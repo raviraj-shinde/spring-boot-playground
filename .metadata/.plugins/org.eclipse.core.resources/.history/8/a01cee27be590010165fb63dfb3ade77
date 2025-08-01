@@ -1,0 +1,48 @@
+package com.raviraj.app;
+
+public class Student {
+//Properties
+	private int rollno;
+	private String name;
+	private int marks;
+
+//Constructor
+	public Student(int rollno, String name, int marks) {
+		super();
+		this.rollno = rollno;
+		this.name = name;
+		this.marks = marks;
+	}
+
+//Getters and Setters	
+	public int getRollno() {
+		return rollno;
+	}
+
+	public void setRollno(int roll_no) {
+		this.rollno = roll_no;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getMarks() {
+		return marks;
+	}
+
+	public void setMarks(int marks) {
+		this.marks = marks;
+	}
+
+//Default override methods
+	@Override
+	public String toString() {
+		return "Student [roll_no=" + roll_no + ", name=" + name + ", marks=" + marks + "]";
+	}
+
+}

@@ -1,0 +1,24 @@
+package com.raviraj.app.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.raviraj.app.dao.StudentDao;
+import com.raviraj.app.model.Student;
+
+@Service
+public class StudentService {
+
+	@Autowired
+	private StudentDao dao;
+
+	public void addStudent(Student s) {
+		dao.save(s);
+	}
+
+	public List<Student> getStudent() {
+		return doa.findAll();
+	}
+}

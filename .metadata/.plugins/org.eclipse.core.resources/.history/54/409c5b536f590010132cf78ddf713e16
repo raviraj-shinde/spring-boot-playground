@@ -1,0 +1,11 @@
+package com.raviraj.app;
+
+public class Laptop implements Computer {
+
+	@Override
+	public void compile() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

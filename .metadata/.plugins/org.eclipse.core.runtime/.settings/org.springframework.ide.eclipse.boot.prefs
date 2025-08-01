@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.h2=1
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=SpringJDBC
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.bootVersion=3.5.3
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.description=Fetching the Values from the DB by using spring JDBC
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.groupId=com.raviraj
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.javaVersion=24
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.language=java
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=SpringJDBC
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packageName=com.raviraj.app
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packaging=jar
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.type=MAVEN
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.version=1.0
+org.springframework.ide.eclipse.boot.wizard.initializr.url=https\://start.spring.io\n

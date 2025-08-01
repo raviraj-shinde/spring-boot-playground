@@ -1,0 +1,36 @@
+package com.raviraj.app;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Alien {
+	//Properties
+	private Computer com;
+	
+	@Value("1")
+	private int age;
+	
+	
+	//Getters and Setters
+	public Computer getCom() {
+		return com;
+	}
+
+	public void setCom(Computer com) {
+		this.com = com;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public void print() {
+		System.out.println("Alien Bean print() Called");
+	}
+	
+}

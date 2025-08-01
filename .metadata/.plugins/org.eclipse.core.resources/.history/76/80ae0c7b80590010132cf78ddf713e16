@@ -1,0 +1,8 @@
+package com.raviraj.app.service;
+
+import org.springframework.stereotype.Component;
+
+@Service
+public class GetMe {
+	
+}

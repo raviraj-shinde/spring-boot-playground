@@ -1,0 +1,8 @@
+package com.raviraj.app;
+
+public class Desktop implements Computer{
+	@Override
+	public void compile() {
+		System.out.println("compiler by using Desktop");	
+	}
+}

@@ -1,0 +1,16 @@
+package com.raviraj.app;
+
+public class Laptop implements Computer {
+	
+	public Laptop() {
+		System.out.println("[ Most probably Laptop constructor called by ApplicationContext ]");
+	}
+
+	@Override
+	public void Compile() {
+		System.out.println("File compiled by Laptop");
+	}
+	
+	
+
+}

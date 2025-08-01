@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="Computer" class="com.raviraj.app.Laptop" scope= "prototype" />
+    
+    <bean id="Seller" class="com.raviraj.app.Seller" scope= "prototype" >
+    	<proporty name="hp" ref="com.raviraj.app.Desktop"></proporty>
+    </bean>/>
+    
+
+</beans>

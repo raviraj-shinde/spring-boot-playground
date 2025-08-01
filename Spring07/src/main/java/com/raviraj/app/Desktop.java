@@ -1,0 +1,11 @@
+package com.raviraj.app;
+
+public class Desktop implements Computer {
+
+	@Override
+	public void Compile() {
+		System.out.println("Alien: Calling @override method compile of Desktop");
+
+	}
+
+}

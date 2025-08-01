@@ -1,0 +1,7 @@
+spring.application.name=SpringJDBC
+
+# Common for both MySQL/H2
+spring.datasource.url=
+spring.datasource.driver-class-name=
+spring.datasource.username=
+spring.datasource.password=

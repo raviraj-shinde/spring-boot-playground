@@ -1,0 +1,4 @@
+INSERT INTO Student(rollno, name, marks) VALUES (22107008, 'Raviraj Shinde', 95);
+INSERT INTO Student(rollno, name, marks) VALUES (22107045, 'Gaurav Pawar', 90);
+INSERT INTO Student(rollno, name, marks) VALUES (22104008, 'Sushil Gade', 87);
+INSERT INTO Student(rollno, name, marks) VALUES (22787008, 'Ashu Yede', 100);
