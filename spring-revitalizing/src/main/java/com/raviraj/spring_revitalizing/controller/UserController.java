@@ -5,7 +5,12 @@ import com.raviraj.spring_revitalizing.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
@@ -23,5 +28,11 @@ public class UserController {
     public ResponseEntity<AuthDTO> getUserInfo(){
         AuthDTO authDTO = userService.getCurrentUserDTO();
         return ResponseEntity.status(HttpStatus.FOUND).body(authDTO);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<Map<String, Object>> loginUser(@RequestBody AuthDTO authDTO){
+        Map<String, Object> response= userService.AuthenticationAndGenerateToken(authDTO);
+        return ResponseEntity.ok(response);
     }
 }
