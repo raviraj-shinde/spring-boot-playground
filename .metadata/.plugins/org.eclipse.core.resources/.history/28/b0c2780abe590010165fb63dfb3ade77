@@ -1,8 +1,0 @@
-CREATE TABLE Student (roll_no INT PRIMARY KEY, name VARCHAR(50), marks INT);
-
-INSERT INTO Student(roll_no, name) VALUES
-(22107008, 'Raviraj Shinde', 95),
-(22107045, 'Gaurav Pawar', 90),
-(22104008, 'Sushil Gade', 87),
-(22107148, 'Sushas Shinde', 75),
-(22787008, 'Ashu Yede', 100),

@@ -1,6 +1,0 @@
-spring.application.name=SpringJDBC
-
-spring.datasource.url=
-spring.datasource.driver-class-name=
-spring.datasource.username=
-spring.datasource.password=

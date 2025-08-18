@@ -1,9 +1,0 @@
-package com.raviraj.app;
-
-public interface Computer {
-	public static void Compiler() {
-		System.out.println("Given the compiler by computer");
-	}
-	
-	public void Compile();
-}
