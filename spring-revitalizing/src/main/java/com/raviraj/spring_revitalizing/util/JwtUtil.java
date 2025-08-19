@@ -23,7 +23,7 @@ public class JwtUtil {
                 .subject(username)
                 .issuedAt(new Date())
                 .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 2))
-                .signWith(Keys.hmacShaKeyFor(key.getBytes()), SignatureAlgorithm.HS256)
+                .signWith(Keys.hmacShaKeyFor(key.getBytes())) //( , SignatureAlgorithm.HS256 ) <- depricated, no need
                 .compact();
     }
 
@@ -51,7 +51,6 @@ public class JwtUtil {
         JwtParser parser = Jwts.parser()  // ✅ Yes, .parser() is back in 0.12.0+ //gets a JwtParserBuilder
                 .verifyWith(Keys.hmacShaKeyFor(key.getBytes()))  // ✅ Replaces setSigningKey()
                 .build(); // now gets a JwtParser
-        System.out.println(parser.parseSignedClaims(token).getPayload());
         return parser.parseSignedClaims(token).getPayload();  // ✅ parseSignedClaims instead of parseClaimsJws
     }
 

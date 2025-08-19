@@ -23,7 +23,6 @@ public class UserController {
         return  ResponseEntity.status(HttpStatus.CREATED).body(registeredUser);
     }
 
-
     @GetMapping("/myinfo")
     public ResponseEntity<AuthDTO> getUserInfo(){
         AuthDTO authDTO = userService.getCurrentUserDTO(null);
