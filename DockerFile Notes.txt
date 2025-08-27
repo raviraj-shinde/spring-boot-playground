@@ -1,0 +1,23 @@
+FROM openjdk:17 → starts from an image that already has Java installed.
+
+Build-time variable (only available while building, not in the final container).
+
+WORKDIR - Sets the working directory for subsequent commands (RUN, COPY, CMD, etc).	           
+		    - If the directory doesn’t exist, Docker creates it.
+                    - Internally: Docker sets this as the "current directory" in container’s filesystem.
+
+
+ENTRYPOINT ["", "" , ....]  - Defines the main executable of the container.
+
+					     - Unlike CMD, ENTRYPOINT is not easily overridden.
+
+EXPOSE -  (-_-)  I hope no need for explanation.
+		- Documents which port the app listens on.
+
+*******************************************************************
+FROM openjdk:17-jdk-slim        # 1. Base image
+ARG JAR_FILE=target/*.jar       # 2. Build-time variable
+WORKDIR /app                    # 3. Set working directory
+COPY ${JAR_FILE} app.jar        # 4. Copy jar into container
+EXPOSE 8080                     # 5. Document port
+ENTRYPOINT ["java","-jar","app.jar"]  # 6. Run app when container starts
