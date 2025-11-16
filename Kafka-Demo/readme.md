@@ -75,11 +75,11 @@
     - Used to read all messages from the topic.
 
 # ------------------------------
-  
-    | Command | Purpose |
-    | :--- | :--- |
-    | `kafka-zookeeper-start.sh` | **Starts the ZooKeeper service** for Kafka coordination. |
-    | `kafka-server-start.sh` | **Starts the Kafka broker** (server) instance. |
-    | `kafka-topics.sh` | **Manages topics** (create, list, describe, delete, alter). |
-    | `kafka-console-producer.sh` | Allows **sending messages** |
-    | `kafka-console-consumer.sh` | Allows **reading messages** |
+
+| Command | Purpose |
+| :--- | :--- |
+| `kafka-zookeeper-start.sh` | **Starts the ZooKeeper service** for Kafka coordination. |
+| `kafka-server-start.sh` | **Starts the Kafka broker** (server) instance. |
+| `kafka-topics.sh` | **Manages topics** (create, list, describe, delete, alter). |
+| `kafka-console-producer.sh` | Allows **sending messages** |
+| `kafka-console-consumer.sh` | Allows **reading messages** |
