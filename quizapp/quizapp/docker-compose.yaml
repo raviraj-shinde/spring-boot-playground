@@ -1,0 +1,41 @@
+version: '2.4'
+services:
+  quizapp:
+    build: .
+    image: 'ravirajshinde96/quizapp.0.0.1'
+    container_name: 'quiz-app-container'
+    ports:
+    - "5000:8080"
+    networks:
+      - quiznet
+    environment:
+      - DB_URL=jdbc:mysql://mysql:3306/quizdb  #or docker.internal.host(os common network not a bridge)
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+    #restart: always  <- The container will always restart if it stops (except when you explicitly stop)
+
+  mysql:
+    image: 'mysql:8.0'
+    networks:
+      - quiznet
+    volumes:
+      - dbdata:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=quizdb
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+networks:
+  quiznet:
+    driver: bridge
+
+volumes:
+  dbdata:
+
+
