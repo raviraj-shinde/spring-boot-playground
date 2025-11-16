@@ -6,6 +6,15 @@
 4. Hit `"http://localhost:8090/location"`  with Put request to start location update.
 5. Watch cab-user: console for location updates comming from **cab-driver to - Kafka Broker - to cab-user.**
 
+<hr style="height: 1px; background-color: black;"> 
+
+## Dependency required for the project
+
+``` 
+1. spring-starter-web
+2. spring-kafka
+```
+
 <hr/>
 
 # Required Kafka properties for producer
@@ -14,6 +23,8 @@
 2. spring.kafka.producer.key-serializer=org.apache.kafka.common.serialization.StringSerializer
 3. spring.kafka.producer.value-serializer=org.apache.kafka.common.serialization.StringSerializer [JSON etc]
 ```
+
+<hr style="height: 1px; background-color: black;"> 
 
 # Required Kafka properties for consumer
 ```
@@ -41,7 +52,7 @@
 - Here kafkaTemplate.send(Topic, Data);
 - Needs DI of KafkaTemplate<String, Object> kafkaTemplate Bean;
 
-
+<hr style="height: 1px; background-color: black;"> 
 
 ## Consumer main Logic 
 ```java
@@ -74,7 +85,7 @@
     - `.\bin\windows\kafka-console-consumer.bat --topic test-topic --bootstrap-server localhost:9092 --from-beginning`
     - Used to read all messages from the topic.
 
-# ------------------------------
+<hr style="height: 1px; background-color: black;"> 
 
 | Command | Purpose |
 | :--- | :--- |
